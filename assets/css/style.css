@@ -1,0 +1,59 @@
+:root {
+    --sidebar-w: 260px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, Arial, sans-serif;
+}
+
+.sidebar {
+    width: var(--sidebar-w);
+    min-width: var(--sidebar-w);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background: var(--bs-body-bg);
+    border-right: 1px solid var(--bs-border-color);
+    padding: 1.5rem 1.25rem;
+    overflow-y: auto;
+}
+
+.pies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+
+.pie-card {
+    flex: 1 1 calc(25% - 1rem);
+    min-width: 180px;
+    max-width: 300px;
+    text-align: center;
+}
+
+@media (max-width: 1150px) {
+    .pie-card {
+        flex: 1 1 calc(33.3% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .pie-card {
+        flex: 1 1 100%;
+    }
+}
+
+.chart-card {
+    background: var(--bs-card-bg);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    height: 460px;
+}
